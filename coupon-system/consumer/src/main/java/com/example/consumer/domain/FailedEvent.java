@@ -1,4 +1,4 @@
-package com.example.api.domain;
+package com.example.consumer.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -6,21 +6,17 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Coupon {
+public class FailedEvent {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private Long userId;
 
-    public Coupon() {
+    public FailedEvent() {
     }
 
-    public Coupon(Long userId) {
+    public FailedEvent(Long userId) {
         this.userId = userId;
-    }
-
-    public Long getId() {
-        return id;
     }
 }
